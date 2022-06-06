@@ -48,3 +48,4 @@ python modelAccuracy.py --path-dataset /home/Desktop/project/datasets/wildaligne
 
 REAL TIME RECOGNITION
 python realTimeRecognition.py --pretrain --load-last './log/modelx/last_checkpoint.pth' --path-dataset /home/Desktop/project/datasets/wildalignedtrain --use-euclidian --euclidianThresh 8.0
+![captura_20220606_210126](https://user-images.githubusercontent.com/27964097/172247793-ef9c9ade-3e6b-4b0f-9fff-549f7da860a6.jpg)
