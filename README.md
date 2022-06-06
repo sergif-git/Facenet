@@ -6,6 +6,8 @@ Models are trained using the FaceNet CNN architecture and triplet loss function.
 Input images for the model have 224 x 244 píxels size and the resulting embeddings are 128.
 To extract and align faces MTCNN is used.
 Multiple programs are served to train, validate, and use the trained model:
+* Note that all these programs are optimized to validate a trained model on 9 users
+
 
 ALIGN IMAGES
 for N in {1..4}; do python align_dataset_mtcnn.py /home/Desktop/project/datasets/wild  /home/Desktop/project/datasets/wildaligned --image_size 224 --margin 44 --gpu_memory_fraction 0.25 & done
