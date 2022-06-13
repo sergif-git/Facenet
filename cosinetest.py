@@ -110,7 +110,7 @@ def main():
     result = defaultdict(list)
     model.eval()
     with torch.no_grad():
-        for threshold in numpy.arange(0, 1, 0.05):
+        for threshold in numpy.arange(0.25, 0.85, 0.05):
             print(threshold)
             correct = 0
             for num, item in enumerate(pairs, 1):

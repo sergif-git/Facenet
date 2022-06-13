@@ -153,7 +153,7 @@ def testAccuracy(saved_data):
         matrixConf = numpy.zeros((mida,mida))
     pathTest = args.path_dataset_testing
     
-    clf = svm.SVC()
+    clf = svm.SVC(kernel='linear')
     if args.use_svm:
         embedding_list2 = []
         name_list2 = []
@@ -200,14 +200,13 @@ def testAccuracy(saved_data):
     print("Actual (x) vs predictions (y):")
     print(matrixConf)
 
-    if not args.use_svm:
-        mida=mida-1
+    mida=mida-1
     actualClass = 0
     tpTotal, tnTotal, fpTotal, fnTotal = 0,0,0,0
     for clas in range(0, mida):
         tp, tn, fp, fn = 0,0,0,0
-        for i in range(0, mida):
-            for j in range(0, mida):
+        for i in range(0, mida+1):
+            for j in range(0, mida+1):
                 if ((i == actualClass) and (j == actualClass)):
                     tp = matrixConf[i][j]
                 if ((i == actualClass) and (j != actualClass)):
@@ -236,7 +235,9 @@ def testAccuracy(saved_data):
     conMatrix = numpy.array([[tpTotal,fnTotal],[fpTotal,tnTotal]])
     print(conMatrix)
 
-    accuracy = round(((tpTotal)/(tpTotal+fnTotal)),2)
+    #Micro F1
+    #accuracy = round(((tpTotal)/(tpTotal+fnTotal)),3)    
+    accuracy = round(((tpTotal+tnTotal)/(tpTotal+tnTotal+fpTotal+fnTotal)),3)
     print("Model accuracy: "+str(accuracy))
 
 

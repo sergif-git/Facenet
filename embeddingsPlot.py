@@ -75,9 +75,9 @@ def main():
         image_list = getImages(os.path.join(directory, subdirectory)) 
         llegenda.append(str(os.path.basename(subdirectory)))
         ax = plt.subplot(files,3,idxPlot)
-        ax.set_title(("Embeddings de "+str(os.path.basename(subdirectory))), fontsize=6)
-        ax.set_ylabel('Valor dins idx', fontsize=4)
-        ax.set_xlabel('Index dins embedding', fontsize=4)
+        ax.set_title(("Embeddings de "+str(os.path.basename(subdirectory))), fontsize=15)
+        ax.set_ylabel('Valor dins idx', fontsize=10)
+        ax.set_xlabel('Index dins embedding', fontsize=10)
         valors = numpy.arange(0,128,1)  
         embedList = [] 
         for image in image_list:     
@@ -93,9 +93,9 @@ def main():
     
     for i in range(len(embedListAveragePerClass)):
         plt.plot(valorsListAveragePerClass[i],embedListAveragePerClass[i], linewidth=1)
-    plt.title("Model original - Embeddings per classe", fontsize=10)    
-    plt.xlabel('Idx dins embedding', fontsize=10)
-    plt.ylabel('Valor dins idx', fontsize=10)
+    plt.title("Model original - Embeddings per classe", fontsize=18)    
+    plt.xlabel('Idx dins embedding', fontsize=14)
+    plt.ylabel('Valor dins idx', fontsize=14)
     plt.legend(fontsize=15) # using a size in points
     plt.legend(llegenda)
     plt.savefig('embeddingsMeanPerClass.jpg', dpi=1500)

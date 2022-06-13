@@ -96,7 +96,7 @@ def cosinesimilarity(emb1, emb2):
 
 
 def main():
-    random_pairs = get_random_pairs(20)
+    random_pairs = get_random_pairs(2000)
     threshold = args.threshold
     model.eval()
     mida = len(df['class'])
@@ -127,20 +127,22 @@ def main():
             name1, name2 = item[0]['id'], item[1]['id'] 
             if actual == 'Correcte':
                 nCorrect = nCorrect +1
-            plt.rcParams["font.size"] = "4"
-            plt.subplot(5,4,num)
+            #plt.rcParams["font.size"] = "4"
+            #plt.subplot(5,4,num)
             imshow(concatenated, text)
             nTotal = nTotal + 1
-    
-    if args.pretrain:
-        plt.title("Model 3 - Classificaccions")
-        plt.savefig('pretrainRandomClassif.png', dpi=1500)
-    else:
-        plt.title("Model original - Classificaccions")
-        plt.savefig('originalRandomClassifs.png', dpi=1500)
-
-    plt.show()
     print('Total correct predictions: '+str(nCorrect)+'/'+str(nTotal)+' ('+str(round(nCorrect/nTotal,3))+')')
+
+'''   
+ if args.pretrain:
+plt.title("Model 3 - Classificaccions")
+plt.savefig('pretrainRandomClassif.png', dpi=1500)
+else:
+plt.title("Model original - Classificaccions")
+plt.savefig('originalRandomClassifs.png', dpi=1500)
+
+plt.show()
+'''
 
 
 if __name__ == '__main__':
