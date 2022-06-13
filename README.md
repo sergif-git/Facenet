@@ -3,11 +3,12 @@ Facial recognition with machine learning - Degree Final Project
 
 These projecte uses machine learning to solve facial recognition in real time.
 Models are trained using the FaceNet CNN architecture and the triplet loss function.
-Input images needs to be 224 x 244 pixels size and the output resulting embeddings are 128.
+Input images needs to be 224 x 244 pixels size and the resulting output embeddings are 128.
 To extract and align faces from original images MTCNN is used.
 A SVC is used to classify embeddings for each class.
 
-Multiple programs are served to train, validate, and use the trained model, note that all these programs are optimized to validate a trained model on 9 users
+Multiple programs are served to train, validate, and use the trained model.
+Note that all these programs are optimized to validate a train a model on 9 users.
 
 
 ALIGN IMAGES
