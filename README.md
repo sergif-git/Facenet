@@ -42,11 +42,11 @@ python cosinetest.py --test-root-dir /home/Desktop/project/datasets/wildalignedt
 
 CLASSIFICATION PLOT
 python classify.py --test-root-dir /home/Desktop/project/datasets/wildalignedtest --test-csv-name /home/Desktop/project/datasets/wildalignedtest.csv --use-euclidian --threshold 9.0
-![pretrainRandomClassif](https://user-images.githubusercontent.com/27964097/172219479-806c7285-def8-4e50-bbad-de61f765d8be.png)
+#![pretrainRandomClassif](https://user-images.githubusercontent.com/27964097/172219479-806c7285-def8-4e50-bbad-de61f765d8be.png)
 
 CONFUSION MATRIX (usine minium embeddings, mean embedding, or SVC)
 python modelAccuracy.py --path-dataset /home/Desktop/project/datasets/wildalignedtrain --path-dataset-testing /home/Desktop/project/datasets/wildalignedtest --use-euclidian --euclidianThresh 9.0
 
 REAL TIME RECOGNITION
 python realTimeRecognition.py --pretrain --load-last './log/modelx/last_checkpoint.pth' --path-dataset /home/Desktop/project/datasets/wildalignedtrain --use-euclidian --euclidianThresh 8.0
-![captura_20220606_210126](https://user-images.githubusercontent.com/27964097/172247793-ef9c9ade-3e6b-4b0f-9fff-549f7da860a6.jpg)
+#![captura_20220606_210126](https://user-images.githubusercontent.com/27964097/172247793-ef9c9ade-3e6b-4b0f-9fff-549f7da860a6.jpg)
