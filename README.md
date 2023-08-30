@@ -25,21 +25,20 @@ python plottrainresults.py --root-dir /home/Desktop/project/log/modeloriginal
 
 EMBEDDINGS DISTANCES PLOT
 python distancies.py --test-root-dir /home/Desktop/project/datasets/wildalignedtrain --test-csv-name /home/Desktop/project/datasets/wildalignedtest.csv --pretrain
-![pretrainDistClasses](https://user-images.githubusercontent.com/27964097/172219458-79437028-4233-4da7-8915-77a9bb0322e2.png)
+<!--![pretrainDistClasses](https://user-images.githubusercontent.com/27964097/172219458-79437028-4233-4da7-8915-77a9bb0322e2.png)-->
 
 EMBEDDINGS VALUES PLOT
 python embeddingsPlot.py --pretrain --path-dataset /home/Desktop/project/datasets/wildalignedtest
-![embeddingsMeanPerClass](https://user-images.githubusercontent.com/27964097/172219403-277e715e-a027-43cf-8adb-369e4641ae77.jpg)
-![embeddingsPerClass](https://user-images.githubusercontent.com/27964097/172219407-4cdacb15-ac4e-4154-9d35-013355a5646f.jpg)
+<!--![embeddingsMeanPerClass](https://user-images.githubusercontent.com/27964097/172219403-277e715e-a027-43cf-8adb-369e4641ae77.jpg)
+![embeddingsPerClass](https://user-images.githubusercontent.com/27964097/172219407-4cdacb15-ac4e-4154-9d35-013355a5646f.jpg)-->
 
 EUCLIDIAN THRESHOLD TEST
 python thresholdtest.py --test-root-dir /home/Desktop/project/datasets/wildalignedtest --test-csv-name /home/Desktop/project/datasets/wildalignedtest.csv --pretrain --num-classif 1000
-![pretrainThreshTest](https://user-images.githubusercontent.com/27964097/172219430-7978ed31-8e2d-4b38-90b8-0dacdcd45593.png)
+<!--![pretrainThreshTest](https://user-images.githubusercontent.com/27964097/172219430-7978ed31-8e2d-4b38-90b8-0dacdcd45593.png)-->
 
 COSINE SIMILARITY TEST
 python cosinetest.py --test-root-dir /home/Desktop/project/datasets/wildalignedtest --test-csv-name /home/Desktop/project/datasets/wildalignedtest.csv --pretrain --num-classif 1000
-![pretrainCosineTest](https://user-images.githubusercontent.com/27964097/172219441-5596789b-591c-4ff9-9fa8-8ed5f640d163.png)
-
+<!--![pretrainCosineTest](https://user-images.githubusercontent.com/27964097/172219441-5596789b-591c-4ff9-9fa8-8ed5f640d163.png)-->
 CLASSIFICATION PLOT
 python classify.py --test-root-dir /home/Desktop/project/datasets/wildalignedtest --test-csv-name /home/Desktop/project/datasets/wildalignedtest.csv --use-euclidian --threshold 9.0
 
